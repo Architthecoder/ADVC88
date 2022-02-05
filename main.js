@@ -84,11 +84,19 @@ function my_keydown(e)
 	function up()
 	{
 		// Write a code to move ball upward.
+		if (ball_y > 450){
+			ball_y -= block_image_height;
+			new_image();
+		}
 	}
 
 	function down()
 	{
 		 // Write a code to move ball downward.
+		 if (ball_y <= 450){
+			 ball_y += block_image_height;
+			 new_image;
+		 }
 	}
 
 	function left()
@@ -96,6 +104,8 @@ function my_keydown(e)
 		if(ball_x >5)
 		{
 			// Write a code to move ball left side.
+			ball_x -= block_image_width;
+			new_image();
 		}
 	}
 
@@ -104,6 +114,8 @@ function my_keydown(e)
 		if(ball_x <=1050)
 		{
 			// Write a code to move ball right side.
+			ball_x += block_image_width;
+			new_image();
 		}
 	}
 	
